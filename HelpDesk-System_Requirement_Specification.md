@@ -1,7 +1,7 @@
 # HelpDesk
 
 - [Hyrje](#Hyrje)
-  - [Qëllimi i dokumentit](#Qëllimi%20i%20dokumentit)
+  - [Qëllimi i dokumentit](##Qëllimi%20i%20dokumentit)
   - [Vlefshmëria e dokumentit](#Vlefshmëria%20e%20dokumentit)
   - [Definimi i termeve dhe shkurtesave](#Definimi%20i%20termeve%20dhe%20shkurtesave)
   - [Relacionet me dokumentet tjera](#Relacionet%20me%20dokumentet%20tjera)
