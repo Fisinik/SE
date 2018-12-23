@@ -1,55 +1,54 @@
 # HelpDesk
 
-- [Hyrje](#Hyrje)
-  - [Qëllimi i dokumentit](#Qëllimi-i-dokumentit)
-  - [Vlefshmëria e dokumentit](#Vlefshmëria-e-dokumentit)
-  - [Definimi i termeve dhe shkurtesave](#Definimi-i-termeve-dhe-shkurtesave)
-  - [Relacionet me dokumentet tjera](#Relacionet-me-dokumentet-tjera)
-  - [Pasqyra e dokumentitt](#Pasqyra-e-dokumentit)
+- [HelpDesk](#helpdesk)
+  - [Hyrje](#hyrje)
+    - [Qëllimi i dokumentit](#q%C3%ABllimi-i-dokumentit)
+    - [Vlefshmëria e dokumentit](#vlefshm%C3%ABria-e-dokumentit)
+    - [Definimi i termeve dhe shkurtesave](#definimi-i-termeve-dhe-shkurtesave)
+    - [Relacionet me dokumentet tjera](#relacionet-me-dokumentet-tjera)
+    - [Pasqyra e dokumentit](#pasqyra-e-dokumentit)
+  - [Përshkrimi i përgjithshëm i produktit](#p%C3%ABrshkrimi-i-p%C3%ABrgjithsh%C3%ABm-i-produktit)
+    - [Qëllimi i produktit](#q%C3%ABllimi-i-produktit)
+    - [Përmbledhje e funksionalitetit të kërkuar](#p%C3%ABrmbledhje-e-funksionalitetit-t%C3%AB-k%C3%ABrkuar)
+    - [Kufizimet e përgjithshme](#kufizimet-e-p%C3%ABrgjithshme)
+    - [Specifikimet harduerike dhe softuerike](#specifikimet-harduerike-dhe-softuerike)
+    - [Shfrytëzuesit e sistemit](#shfryt%C3%ABzuesit-e-sistemit)
+      - [Guest User](#guest-user)
+      - [Registered User](#registered-user)
+      - [Ofruesi i shërbimit RTC](#ofruesi-i-sh%C3%ABrbimit-rtc)
+      - [Administratori](#administratori)
+  - [Përshkrimi i detajuar i sistemit](#p%C3%ABrshkrimi-i-detajuar-i-sistemit)
+    - [Fusha e dorëzimit](#fusha-e-dor%C3%ABzimit)
+    - [Pritjet e përdoruesit](#pritjet-e-p%C3%ABrdoruesit)
+    - [Skenarët e interaksioneve me rrethinën](#skenar%C3%ABt-e-interaksioneve-me-rrethin%C3%ABn)
+      - [Shfrytëzuesi shikon dashboard](#shfryt%C3%ABzuesi-shikon-dashboard)
+      - [Shfrytëzuesi bën kërkim (search)](#shfryt%C3%ABzuesi-b%C3%ABn-k%C3%ABrkim-search)
+      - [Shfrytëzuesi komunikon me AI Chat Bot](#shfryt%C3%ABzuesi-komunikon-me-ai-chat-bot)
+      - [Shfrytëzuesi regjistrohet](#shfryt%C3%ABzuesi-regjistrohet)
+      - [Shfrytëzuesi kyçet](#shfryt%C3%ABzuesi-ky%C3%A7et)
+      - [Shfrytëzuesi përdor shërbimin RTC](#shfryt%C3%ABzuesi-p%C3%ABrdor-sh%C3%ABrbimin-rtc)
+      - [Shfrytëzuesi parashtron problemin në forum](#shfryt%C3%ABzuesi-parashtron-problemin-n%C3%AB-forum)
+      - [Ofruesi i shërbimit RTC/registered user i përgjigjet një pyetje në forum](#ofruesi-i-sh%C3%ABrbimit-rtcregistered-user-i-p%C3%ABrgjigjet-nj%C3%AB-pyetje-n%C3%AB-forum)
+      - [Shfrytëzuesi përdor shërbimin pikat e shitjes](#shfryt%C3%ABzuesi-p%C3%ABrdor-sh%C3%ABrbimin-pikat-e-shitjes)
+      - [Administratori menaxhon ofruesin e shërbimit RTC](#administratori-menaxhon-ofruesin-e-sh%C3%ABrbimit-rtc)
+      - [Administratori nxjerr raporte administrative dhe financiare](#administratori-nxjerr-raporte-administrative-dhe-financiare)
+    - [Funksionet e kërkuara nga sistemi](#funksionet-e-k%C3%ABrkuara-nga-sistemi)
+      - [Kërkesat funksionale](#k%C3%ABrkesat-funksionale)
+      - [Kërkesat jofunksionale](#k%C3%ABrkesat-jofunksionale)
+    - [Funksionet tjera të kërkuara nga produkti](#funksionet-tjera-t%C3%AB-k%C3%ABrkuara-nga-produkti)
+      - [Siguria](#siguria)
+      - [Besueshmëria](#besueshm%C3%ABria)
+      - [Mbështetja](#mb%C3%ABshtetja)
+      - [Dokumentimi dhe trajnimi](#dokumentimi-dhe-trajnimi)
+      - [Përdorueshmëria](#p%C3%ABrdorueshm%C3%ABria)
+      - [Performanca](#performanca)
+      - [Mirëmbajtja](#mir%C3%ABmbajtja)
+  - [Specifikimet për menaxhimin e projektit](#specifikimet-p%C3%ABr-menaxhimin-e-projektit)
+    - [Komponentet e gatshme dhe të investuara](#komponentet-e-gatshme-dhe-t%C3%AB-investuara)
+    - [Kushtet e pranimit](#kushtet-e-pranimit)
+    - [Kushtet e dorëzimit](#kushtet-e-dor%C3%ABzimit)
+    - [Garancioni](#garancioni)
   
-- [Përshkrimi i përgjithshëm i produktit](#Përshkrimi-i-përgjithshëm-i-produktit)
-  - [Qëllimi i produktit](#Qëllimi-i-produktit)
-  - [Përmbledhje e funksionalitetit të kërkuar](#Përmbledhje-e-funksionalitetit-të-kërkuar)
-  - [Kufizimet e përgjithshme](#Kufizimet-e-përgjithshme)
-  - [Specifikimet harduerike dhe softuerike](#Specifikimet-harduerike-dhe-softuerike)
-  - [Shfrytëzuesit e sistemit](#Shfrytëzuesit-e-sistemit)
-    - [Guest User](#Guest-User)
-    - [Registered User](#Registered-User)
-    - [Ofruesi i shërbimit RTC](#Ofruesi-i-shërbimit-RTC)
-    - [Admininistratori](#Admininistratori)
-  
-- [Përshkrimi i detajuar i sistemit](#Përshkrimi-i-detajuar-i-sistemit)
-  - [Fusha e dorëzimit](#Fusha-e-dorëzimit)
-  - [Pritjet e përdoruesit](#Pritjet-e-përdoruesit)
-  - [Skenaret e interaksioneve me rrethinën](#Skenaret-e-interaksioneve-me-rrethinën)
-    - [Shfrytëzuesi shikon dashboard](#Shfrytëzuesi-shikon-dashboard)
-    - [Shfrytëzuesi bën kërkim (search)](#Shfrytëzuesi-bën-kërkim-(search))
-    - [Shfrytëzuesi komunikon me AI Chat Bot](#Shfrytëzuesi-komunikon-me-AI-Chat-Bot)
-    - [Shfrytëzuesi regjistrohet](#Shfrytëzuesi-regjistrohet)
-    - [Shfrytëzuesi kyçet](#Shfrytëzuesi-kyçet)
-    - [Shfrytëzuesi përdor shërbimin RTC](#Shfrytëzuesi-përdor-shërbimin-RTC)
-    - [Sub](#sub)
-    - [Sub](#sub)
-    - [Shfrytëzuesi përdor shërbimin pikat e shitjes](#Shfrytëzuesi-përdor-shërbimin-pikat-e-shitjes)
-    - [Administratori menaxhon ofruesin e shërbimit RTC](#Administratori-menaxhon-ofruesin-e-shërbimit-RTC)
-    - [Administratori nxjerr raporte administrative dhe financiare](#Administratori-nxjerr-raporte-administrative-dhe-financiare)
-  - [Funksionet e kërkuara nga sistemi](#Funksionet-e-kërkuara-nga-sistemi)
-    - [Kërkesat funksionale](#Kërkesat-funksionale)
-    - [Kërkesat jofunksionale](#Kërkesat-jofunksionale)
-  - [Funksionet tjera të kërkuara nga produkti](#Funksionet-tjera-të-kërkuara-nga-produkti)
-    - [Siguria](#Siguria)
-    - [Besueshmëria](#Besueshmëria)
-    - [Mbështetja](#Mbështetja)
-    - [Dokumentimi dhe trajnimi](#Dokumentimi-dhe-trajnimi)
-    - [Përdorueshmëria](#Përdorueshmëria)
-    - [Performanca](#Performanca)
-    - [Mirëmbajtja](#Mirëmbajtja)
-  
-- [Specifikimet për menaxhimin e projektit](#Specifikimet-për-menaxhimin-e-projektit)
-  - [Komponentet e gatshme dhe të investuara](#Komponentet-e-gatshme-dhe-të-investuara)
-  - [Kushtet e pranimit](#Kushtet-e-pranimit)
-  - [Kushtet e dorëzimit](#Kushtet-e-dorëzimit)
-  - [Garancioni](#Garancioni)
 
 ## Hyrje
 
@@ -233,13 +232,13 @@ të regjistrimit (krijimit të llogarisë).
 
 Shërbimi RTC (Real Time Chat) i ofron shfrytëzuesit mundësinë e bisedimit me një ofrues të shërbimit për support. Çasja e tillë ndaj problemit është më efikase dhe përderisa shfrytëzon resurse njerëzore është shërbim me pagesë. Përjashtim bëjnë shfrytëzuesit të cilët kanë garancion paraprak për paisjen për të cilën kërkohet asistencë. Kërkohet nga shfrytëzuesi të jetë i kyçur me llogarinë e tij dhe t'i ketë paraprakisht të dhënat e sakta bankare në llogarinë e tij në sistem.
 
-#### Shfrytëzuesi (registered mode) parashtron problemin në forum
+#### Shfrytëzuesi parashtron problemin në forum
 
-@ NOT DONE
+Parashtrimin e problemit në forum mund ta parashtrojë shfrytëzuesi i cili më parë është autentikuar në platformë. Klienti i cili nuk është autentikuar në platformë nuk mundet që të parashtrojë problemin në forum. Parashtrimi i pyetjes bëhet në bazë të rregullave të vendosur nga zhvilluesit e platformës, që nuk priten të jenë të komplikuara për user-in.
 
 #### Ofruesi i shërbimit RTC/registered user i përgjigjet një pyetje në forum
 
-@ NOT DONE
+Platforma online HelpDesk përmbanë pyetjet më të shpeshta në të cilat mund të i shohë secili klient qoftë ai guest apo user registred. Pyetjet e parashtruara nga klientët në forum mund të i përgjigjet  një nga antarët e shërbimit RTC. Pyetjet ne forum mund të kenë përgjigjje edhe nga cilido antarë i forumit i cili ështëi rexhistruar në platformën online HelpDesk. Përgjigjja e sakt  mund të vlersohen nga user-i cili parashtronë pyetjen. Në qoftë se pyetja merr përgjigjje të saktë atëherë ai user i cili është përgjigjur sakt përfiton benifite në produkte të caktuara të kompanisë.
 
 #### Shfrytëzuesi përdor shërbimin pikat e shitjes
 
@@ -251,7 +250,7 @@ Administratori duhet të ketë qasje më të privilegjuar në sistem. Administra
 
 #### Administratori nxjerr raporte administrative dhe financiare
 
-@ NOT DONE
+Administratori krijon raport ditorë i cili pasqyron të gjitha aktivitetet e bëra në lidhje me pytjet/pergjigjjet e kerkesave te shfrytezueseve gjatë një dite. Administratori kyçet në sistem, autentifikohet me username dhe password dhe ne menu zgjedh opsionin për gjenerim të raporteve dhe klikon në gjenerimin e raportit ditor. Administratori mund të gjenerojë edhe raportin financiar brenda ditës tek i cili raport shfaqen të hyrat që kryesisht vijnë nga regjistrimi i ri i klientëve. Gjithashtu ky raportë shfaqë edhe rimbursimet e klientëve me rastin e mos zgjidhjes së problemit. Gjatë gjenerimit të raportit ditor administratori gjeneron edhe raportin ne lidhje me ankesat e mundshme  nga klientët për cilindo pjestarë të kompanisë.
 
 ### Funksionet e kërkuara nga sistemi
 
