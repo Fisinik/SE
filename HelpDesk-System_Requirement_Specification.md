@@ -116,7 +116,7 @@ Sistemi online HelpDesk siguron mbeshtetje online për 24 orë në ditë, stafë
 Duke pasur parasysh që koha është e njëjtë në të gjitha vendet ku pritet që të shfrytëzohet kjo platformë  online, stafi nuk ka nevojë të jetë 24 orë aktivë, kështu që gjatë ditës mund të shfrytëzohet chat live me stafin e caktuar,  kurse gjatë natës mund të shfrytëzohet Chat Bot ose Search Engine. <br>
 Për të pasur qasje në chat live klient duhet të jetë i regjistruar si përdorues dhe të shfrytëzoj benifite më të mëdha, gjithmonë duke i siguruar klientit se të dhënat e tij do jenë të siguruara nga  kompania.Sistemi do jetë në gjuhën shqipe pasi do të krijohet pikërisht për rajonin shqip-folës. Dizajni i kësaj platforme do të bëhet duke u bazuar në site-in global të “Xiaomi”.
 
-### Kufizimet e përgjithshme 
+### Kufizimet e përgjithshme
 
 Sistemi pa marrë parasysh përshtatjen me shumicën e popullsisë në të cilën do të zhvillohet do të jetë  I kufizuar për përdorimin e pakicave të cilat ndodhen në vend, për ata që kanë probleme me gjuhën në të cilën është krijuar sistemi.Edhe pse shumica e browserve japin mundsinë e përkthimit në cilendo gjuhë prape do të jete problem mënyra e përkthimit dhe përdorimi I opsioneve si chat bot dhe telefonatës . Sistemi do të jetë I kufizuar edhe në ofrimin e shërbimeve ndihmëse për shkak të llojllojshmerisë së problemeve që mund të kenë paisjet, duke marrë parasysh kualifikimin e stafit do të mundohemi që ta minimizojmë pamundsimin e ofrimit të sherbimeve.
 
@@ -200,11 +200,34 @@ Shfrytëzuesi ka mundësinë të komunikoj me AI Chat bot-in. Përdorimi i këti
 
 #### Shfrytëzuesi regjistrohet
 
-@ NOT DONE
+Një përdorues i ri mund të regjistrohet në sistemin HelpDesk. Shfrytëzuesi dëshiron të regjistrohet dhe të krijojë llogarinë me lehtësi dhe brenda një kohe të shkurtër. Kompania dëshiron të kënaq interesat e përdoruesit dhe të validoj të dhënat e përdoruesit.
+
+- Përdoruesi i ri klikon tek "krijoni llogari të re".
+- Përdoruesit ju shfaqet ekrani për informacionet e llogarisë.
+- Përdoruesi jep të dhënat personale në ekranin për informacionet e llogarisë.
+  - Emri (obligative)
+  - Mbiemri (obligative)
+  - Emailin (obligative)
+  - Adresa e rrugës (e preferueshme)
+  - Qyteti (e preferueshme)
+  - Shteti (e preferueshme)
+  - Kodi Postar (obligative)
+  - Numri i telefonit (obligative)
+  - Kredia Bankare (e preferueshme)
+  - Security Number (e preferueshme)
+- Përdoruesi klikon mbi butonin i cili validon të dhënat dhe pastaj shfaqet faqja për krijimin e llogarisë
+- Përdoruesi jep emrin dhe fjalëkalimin për krijim të llogarisë.
+- Sistemi vërteton se a ekziston ky përdorues me këtë username. Nëse jo, sistemi shfaqë faqen për konfirmimin e llogarisë së re.
+- Sistemi i dërgon përdoruesit një njoftin në email që llogaria e tij është krijuar me sukses
 
 #### Shfrytëzuesi kyçet
 
-@ NOT DONE
+Përdoruesit fitojnë qasje në sistemin HelpDesk nëpërmjet procesit
+të regjistrimit (krijimit të llogarisë).
+
+1. Përdoruesi hap faqen për tu authentikuar.
+2. Përdoruesi fut emrin e përdoruesit dhe fjalëkalimin e tij.
+3. Sistemi validon emrin e përdoruesit dhe fjalëkalimin (me sukses) dhe tregon faqen e informacionit mbi llogarinë e përdoruesit.
 
 #### Shfrytëzuesi (registered mode) përdor shërbimin RTC
 
@@ -220,11 +243,11 @@ Shërbimi RTC (Real Time Chat) i ofron shfrytëzuesit mundësinë e bisedimit me
 
 #### Shfrytëzuesi (registered/guest mode) përdor shërbimin pikat e shitjes
 
-@ NOT DONE
+Shfrytëzuesi qoftë ai i regjistruar apo jo, në të dy privilegjet ka në dispozicion të përdor shërbimin pikat e shitjes. Ky shërbim i ofron klientit të gjejë lokacionin më të afërt i cili ofron produktet e kompanisë. Nëse klienti përdorë këtë shërbim atëherë do paraqitet një hartë me lokacionin e preferuar i cili është më i afërti me klientin.
 
 #### Administratori regjistron/fshin ofruesin e shërbimit RTC
 
-@ NOT DONE
+Administratori duhet të ketë qasje më të privilegjuar në sistem. Administratori mund të regjistrojë ose të fshij punëtorë. Ai do ketë qasje tek disa meny të cilat nuk kanë qasje punëtorët si: raporti mbi punëtorët, administrimi i punëtorëve, caktimi i detyrave. Administruesi mund të kontrollojë edhe menynë e ankesave për punëtorët e tij. Në menynë ankesat, klientet mund të japin ndonjë ankesë për punëtorët e këtij sektori.
 
 #### Administratori nxjerr raporte administrative dhe financiare
 
@@ -293,7 +316,7 @@ NOT DONE
 - Sistemi ofron udhëzues për përdorim, sistemin ndihmës (help system).
 - Trajnimi duhet të përfshijë shembuj të përdorimit të sistemit, siq janë webinar-et online WebEx, GoToMeeting etj.
 
-#### Përdorueshmëria 
+#### Përdorueshmëria
 
 - Shfrytëzuesit duhet të jenë në gjendje të përdorin softuerin pas një kohe mjaft të shkurtë të marrjes së instruksioneve për përdorim.
 - Shfytëzuesi që dëshiron të kërkojë informacione për produktin duhet të jetë në gjendje të marrë përgjigjje brenda disa sekondave.
@@ -346,5 +369,4 @@ Dokumentimi i cili duhet të dorëzohet me rastin e finalizimit të projektit ja
 
 ### Garancioni
 
-Sistemi online në momentin e dorëzimit duhet të jetë në funksionalitet 100% dhe i 
-çasshëm nga përdoruesit e kësaj platforme. Sistemi duhet të jetë në gjendje të punojë 24/7 dhe për kohë të pacaktuar deri në marrjen e ndonjë vendimi për mos funksionim nga ana e kompanisë. Për çdo dëmtim eventual hardwerik përgjegjës është kompania “Xiaomi”. Për mos funksionalitet të plotë të softwerit atëherë përgjegjësia bie mbi punëtorët e  kompanisë. Mirëmbajtja bëhet nga punëtorët e kompanisë “Xiaomi” të cilët janë në kontratë të pacaktuar nga kompania. Për çdo ndryshim eventual rreth sistemit, vendim merr bordi përgjegjës i kompanisë.
+Sistemi online në momentin e dorëzimit duhet të jetë në funksionalitet 100% dhe i çasshëm nga përdoruesit e kësaj platforme. Sistemi duhet të jetë në gjendje të punojë 24/7 dhe për kohë të pacaktuar deri në marrjen e ndonjë vendimi për mos funksionim nga ana e kompanisë. Për çdo dëmtim eventual hardwerik përgjegjës është kompania “Xiaomi”. Për mos funksionalitet të plotë të softwerit atëherë përgjegjësia bie mbi punëtorët e  kompanisë. Mirëmbajtja bëhet nga punëtorët e kompanisë “Xiaomi” të cilët janë në kontratë të pacaktuar nga kompania. Për çdo ndryshim eventual rreth sistemit, vendim merr bordi përgjegjës i kompanisë.
