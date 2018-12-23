@@ -1,6 +1,6 @@
 # Software Engineering
 
-Group members
+## Group members
 - Blerta Gllareva
 - Driton Shkodra
 - Fisnik Spahija
