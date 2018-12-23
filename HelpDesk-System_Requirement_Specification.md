@@ -225,9 +225,9 @@ Një përdorues i ri mund të regjistrohet në sistemin HelpDesk. Shfrytëzuesi 
 Përdoruesit fitojnë qasje në sistemin HelpDesk nëpërmjet procesit
 të regjistrimit (krijimit të llogarisë).
 
-1. Përdoruesi hap faqen për tu authentikuar.
-2. Përdoruesi fut emrin e përdoruesit dhe fjalëkalimin e tij.
-3. Sistemi validon emrin e përdoruesit dhe fjalëkalimin (me sukses) dhe tregon faqen e informacionit mbi llogarinë e përdoruesit.
+- Përdoruesi hap faqen për tu authentikuar.
+- Përdoruesi fut emrin e përdoruesit dhe fjalëkalimin e tij.
+- Sistemi validon emrin e përdoruesit dhe fjalëkalimin (me sukses) dhe tregon faqen e informacionit mbi llogarinë e përdoruesit.
 
 #### Shfrytëzuesi përdor shërbimin RTC
 
