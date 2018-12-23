@@ -208,7 +208,7 @@ Shfrytëzuesi ka mundësinë të komunikoj me AI Chat bot-in. Përdorimi i këti
 
 #### Shfrytëzuesi (registered mode) përdor shërbimin RTC
 
-@ NOT DONE
+Shërbimi RTC (Real Time Chat) i ofron shfrytëzuesit mundësinë e bisedimit me një ofrues të shërbimit për support. Çasja e tillë ndaj problemit është më efikase dhe përderisa shfrytëzon resurse njerëzore është shërbim me pagesë. Përjashtim bëjnë shfrytëzuesit të cilët kanë garancion paraprak për paisjen për të cilën kërkohet asistencë. Kërkohet nga shfrytëzuesi të jetë i kyçur me llogarinë e tij dhe t'i ketë paraprakisht të dhënat e sakta bankare në llogarinë e tij në sistem.
 
 #### Shfrytëzuesi (registered mode) parashtron problemin në forum
 
