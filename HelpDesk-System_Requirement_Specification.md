@@ -25,14 +25,14 @@
     - [Shfrytëzuesi shikon dashboard](#Shfrytëzuesi%20shikon%20dashboard)
     - [Shfrytëzuesi bën kërkim (search)](#Shfrytëzuesi%20bën%20kërkim%20(search))
     - [Shfrytëzuesi komunikon me AI Chat Bot](#Shfrytëzuesi%20komunikon%20me%20AI%20Chat%20Bot)
+    - [Shfrytëzuesi regjistrohet](#Shfrytëzuesi%20regjistrohet)
+    - [Shfrytëzuesi kyçet](#Shfrytëzuesi%20kyçet)
+    - [Shfrytëzuesi përdor shërbimin RTC](#Shfrytëzuesi%20përdor%20shërbimin%20RTC)
     - [Sub](#sub)
     - [Sub](#sub)
-    - [Sub](#sub)
-    - [Sub](#sub)
-    - [Sub](#sub)
-    - [Sub](#sub)
-    - [Sub](#sub)
-    - [Sub](#sub)
+    - [Shfrytëzuesi përdor shërbimin pikat e shitjes](#Shfrytëzuesi%20përdor%20shërbimin%20pikat%20e%20shitjes)
+    - [Administratori menaxhon ofruesin e shërbimit RTC](#Administratori%20menaxhon%20ofruesin%20e%20shërbimit%20RTC)
+    - [Administratori nxjerr raporte administrative dhe financiare](#Administratori%20nxjerr%20raporte%20administrative%20dhe%20financiare)
   - [Funksionet e kërkuara nga sistemi](#Funksionet%20e%20kërkuara%20nga%20sistemi)
     - [Kërkesat funksionale](#Kërkesat%20funksionale)
     - [Kërkesat jofunksionale](#Kërkesat%20jofunksionale)
@@ -229,7 +229,7 @@ të regjistrimit (krijimit të llogarisë).
 2. Përdoruesi fut emrin e përdoruesit dhe fjalëkalimin e tij.
 3. Sistemi validon emrin e përdoruesit dhe fjalëkalimin (me sukses) dhe tregon faqen e informacionit mbi llogarinë e përdoruesit.
 
-#### Shfrytëzuesi (registered mode) përdor shërbimin RTC
+#### Shfrytëzuesi përdor shërbimin RTC
 
 Shërbimi RTC (Real Time Chat) i ofron shfrytëzuesit mundësinë e bisedimit me një ofrues të shërbimit për support. Çasja e tillë ndaj problemit është më efikase dhe përderisa shfrytëzon resurse njerëzore është shërbim me pagesë. Përjashtim bëjnë shfrytëzuesit të cilët kanë garancion paraprak për paisjen për të cilën kërkohet asistencë. Kërkohet nga shfrytëzuesi të jetë i kyçur me llogarinë e tij dhe t'i ketë paraprakisht të dhënat e sakta bankare në llogarinë e tij në sistem.
 
@@ -241,17 +241,17 @@ Shërbimi RTC (Real Time Chat) i ofron shfrytëzuesit mundësinë e bisedimit me
 
 @ NOT DONE
 
-#### Shfrytëzuesi (registered/guest mode) përdor shërbimin pikat e shitjes
+#### Shfrytëzuesi përdor shërbimin pikat e shitjes
 
-Shfrytëzuesi qoftë ai i regjistruar apo jo, në të dy privilegjet ka në dispozicion të përdor shërbimin pikat e shitjes. Ky shërbim i ofron klientit të gjejë lokacionin më të afërt i cili ofron produktet e kompanisë. Nëse klienti përdorë këtë shërbim atëherë do paraqitet një hartë me lokacionin e preferuar i cili është më i afërti me klientin.
+Shfrytëzuesi qoftë ai i regjistruar apo jo, në të dy privilegjet ka në dispozicion të përdor shërbimin pikat e shitjes. Ky shërbim i ofron klientit të gjejë lokacionin më të afërt i cili ofron produktet e kompanisë. Nëse klienti përdorë këtë shërbim atëherë do paraqitet një hartë me lokacionin e preferuar i cili është më i afërti me klientin. Kemi mundësinë që me privilegjin Registered User të automatizohet procesi i lokalizimit të pikës më të afërt, për dallim nga privilegji Guest User që duhet bërë manualisht procesi.
 
-#### Administratori regjistron/fshin ofruesin e shërbimit RTC
+#### Administratori menaxhon ofruesin e shërbimit RTC
 
 Administratori duhet të ketë qasje më të privilegjuar në sistem. Administratori mund të regjistrojë ose të fshij punëtorë. Ai do ketë qasje tek disa meny të cilat nuk kanë qasje punëtorët si: raporti mbi punëtorët, administrimi i punëtorëve, caktimi i detyrave. Administruesi mund të kontrollojë edhe menynë e ankesave për punëtorët e tij. Në menynë ankesat, klientet mund të japin ndonjë ankesë për punëtorët e këtij sektori.
 
 #### Administratori nxjerr raporte administrative dhe financiare
 
-NOT DONE
+@ NOT DONE
 
 ### Funksionet e kërkuara nga sistemi
 
