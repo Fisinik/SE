@@ -538,4 +538,4 @@ Obligimi i vetëm i klientit është që të sigurojë harduerin në mënyrë q�
 
 ### Planifikimi i buxhetit 
 
-<img src="img/PlanifikimiBuxhetit.png">
+<img src="img/PlaniBuxhetor.png">
