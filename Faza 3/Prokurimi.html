@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prokurimi.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="prokurimi">Prokurimi</h1>
+<ul>
+<li><a href="#prokurimi">Prokurimi</a>
+<ul>
+<li><a href="#hyrje">Hyrje</a>
+<ul>
+<li><a href="#q%C3%ABllimi-i-dokumentit">Qëllimi i dokumentit</a></li>
+<li><a href="#vlefshm%C3%ABria-e-dokumentit">Vlefshmëria e dokumentit</a></li>
+<li><a href="#definimi-i-termeve-dhe-shkurtesave">Definimi i termeve dhe shkurtesave</a></li>
+<li><a href="#relacionet-me-dokumentet-tjera">Relacionet me dokumentet tjera</a></li>
+<li><a href="#pasqyra-e-dokumentit">Pasqyra e dokumentit</a></li>
+</ul>
+</li>
+<li><a href="#p%C3%ABrshkrimi-i-p%C3%ABrgjithsh%C3%ABm-i-sistemit-t%C3%AB-k%C3%ABrkuar">Përshkrimi i përgjithshëm i sistemit të kërkuar</a>
+<ul>
+<li><a href="#relacioni-me-projektet-ekzistuese">Relacioni me projektet ekzistuese</a></li>
+<li><a href="#q%C3%ABllimi-i-sistemit-t%C3%AB-k%C3%ABrkuar">Qëllimi i sistemit të kërkuar</a></li>
+<li><a href="#kufizimet-dhe-inkorporimi-i-produktit">Kufizimet dhe inkorporimi I produktit</a></li>
+<li><a href="#p%C3%ABrmbledhje-e-funksionalitetit-t%C3%AB-k%C3%ABrkuar">Përmbledhje e funksionalitetit të kërkuar</a></li>
+<li><a href="#kufizimet-e-p%C3%ABrgjithshme">Kufizimet e përgjithshme</a></li>
+<li><a href="#specifikimet-harduerike-dhe-softuerike">Specifikimet Harduerike dhe Softuerike</a>
+<ul>
+<li><a href="#specifikimet-harduerike">Specifikimet harduerike</a></li>
+</ul>
+</li>
+<li><a href="#specifikimet-softuerike">Specifikimet softuerike</a></li>
+<li><a href="#specifikimet-fizike">Specifikimet fizike</a></li>
+<li><a href="#shfryt%C3%ABzuesit-e-sistemit-t%C3%AB-k%C3%ABrkuar">Shfrytëzuesit e sistemit të kërkuar</a></li>
+</ul>
+</li>
+<li><a href="#p%C3%ABrshkrimi-i-detajuar-i-sistemit">Përshkrimi i detajuar i sistemit</a>
+<ul>
+<li><a href="#fusha-e-dor%C3%ABzimit">Fusha e dorëzimit</a></li>
+<li><a href="#skenar%C3%ABt-e-interaksioneve-me-rrethin%C3%ABn">Skenarët e interaksioneve me rrethinën</a></li>
+<li><a href="#pritjet-e-p%C3%ABrdoruesit">Pritjet e përdoruesit</a></li>
+<li><a href="#funksionet-e-k%C3%ABrkuara-nga-sistemi">Funksionet e kërkuara nga sistemi</a>
+<ul>
+<li><a href="#k%C3%ABrkesat-funksionale">Kërkesat funksionale</a></li>
+<li><a href="#k%C3%ABrkesat-jofunksionale">Kërkesat jofunksionale</a></li>
+</ul>
+</li>
+<li><a href="#funksionet-tjera-t%C3%AB-k%C3%ABrkuara-nga-produkti">Funksionet tjera të kërkuara nga produkti</a>
+<ul>
+<li><a href="#performanca-e-sistemit">Performanca e sistemit</a></li>
+<li><a href="#siguria">Siguria</a></li>
+<li><a href="#portabiliteti">Portabiliteti</a></li>
+<li><a href="#besueshm%C3%ABria">Besueshmëria</a></li>
+<li><a href="#mir%C3%ABmbajtja">Mirëmbajtja</a></li>
+<li><a href="#rip%C3%ABrdorimi">Ripërdorimi</a></li>
+<li><a href="#p%C3%ABrdorueshm%C3%ABria">Përdorueshmëria</a></li>
+</ul>
+</li>
+<li><a href="#modeli-i-domenit">Modeli i domenit</a></li>
+<li><a href="#skenar%C3%ABt-e-interaksionit-use-case">Skenarët e interaksionit (use case)</a>
+<ul>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-1">Përshkrimi për use case 1</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-2">Përshkrimi për use case 2</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-3">Përshkrimi për use case 3</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-4">Përshkrimi për use case 4</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-5">Përshkrimi për use case 5</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-6">Përshkrimi për use case 6</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-7">Përshkrimi për use case 7</a></li>
+<li><a href="#p%C3%ABrshkrimi-p%C3%ABr-use-case-8">Përshkrimi për use case 8</a></li>
+</ul>
+</li>
+<li><a href="#k%C3%ABrkesat-e-klientit-p%C3%ABr-menaxhimin-e-projektit">Kërkesat e klientit për menaxhimin e projektit</a></li>
+<li><a href="#k%C3%ABrkesat-e-implementimit">Kërkesat e implementimit</a></li>
+<li><a href="#komponentet-e-gatshme-dhe-ato-t%C3%AB-blera">Komponentet e gatshme dhe ato të blera</a></li>
+<li><a href="#n%C3%ABnkontraktimi">Nënkontraktimi</a></li>
+<li><a href="#kushtet-e-pranimit">Kushtet e pranimit</a></li>
+<li><a href="#kushtet-e-dor%C3%ABzimit">Kushtet e dorëzimit</a></li>
+<li><a href="#garancia">Garancia</a></li>
+</ul>
+</li>
+<li><a href="#obligimet-e-klientit">Obligimet e klientit</a>
+<ul>
+<li><a href="#planifikimi-i-resurseve">Planifikimi i resurseve</a></li>
+<li><a href="#planifikimi-i-buxhetit">Planifikimi i buxhetit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="hyrje">Hyrje</h2>
+<h3 id="q%C3%ABllimi-i-dokumentit">Qëllimi i dokumentit</h3>
+<p>Qëllimi i këtij dokumenti është përshkrimi i kërkesave të shfrytëzuesit të këtij sistemi, përkatësisht termave të referencës të cilat shërbejnë për zhvillimin e sistemit.</p>
+<h3 id="vlefshm%C3%ABria-e-dokumentit">Vlefshmëria e dokumentit</h3>
+<p>Ky dokument është i vlefshëm vetëm gjatë procesimit të kontraktimit dhe zhvillimit të projektit.</p>
+<h3 id="definimi-i-termeve-dhe-shkurtesave">Definimi i termeve dhe shkurtesave</h3>
+<ul>
+<li>SIMP - Sistemi Informativ i menaxhimit të Prokurimit</li>
+<li>AKK  - Agjensia kundër korrupsionit</li>
+<li>MIF  - Ministria e Financave</li>
+<li>FIEK - Fakulteti I Inxhinierisë Elektrike dhe Kompjuterike</li>
+<li>GHz  - Giga Herz</li>
+<li>TB   - Tera Byte</li>
+<li>GB   - Giba Byte</li>
+<li>MB   - Mega Byte</li>
+<li>W/h  - Watt per hour</li>
+<li>Gbps - Giga bits per second</li>
+<li>MS   - Microsoft</li>
+<li>SQL  - Select Query Language</li>
+<li>PDF  - Portable Document Format</li>
+<li>IIS  - Internet information services</li>
+<li>RAM  - Random Access Memory</li>
+</ul>
+<h3 id="relacionet-me-dokumentet-tjera">Relacionet me dokumentet tjera</h3>
+<p>Ky dokument lidhet dokumentin e Studimit te Fizibilitetit të SIMP,sistemit të realizuar me datën 12/11/2018  si dhe me ligjin nr. 03/L -172 për mbrojtjen e të dhënave personale dhe me ligjin nr. 03/L-215 për qasjen e dokumenteve publike.</p>
+<h3 id="pasqyra-e-dokumentit">Pasqyra e dokumentit</h3>
+<p>Pasqyra e dokumentit përfshin një përshkrim të përgjithshëm të sistemit elektronik SIMP,duke I dhënë një pamje se si do të duket forma online e aplikimit.Implementimi I një sistemi të tillë do të lehtësonte eksperiencën e aplikuesve,për arsye se autoritetet kontraktuese kanë mundësi të publikojnë tenderet në sistem. Ofertat dorëzohen përmes platformës e cila është e enkriptuar dhe tani më nuk ka mundësi që të ketë parregullsi me ndërrimin e dokumenteve siç ka pasur në të kaluarën, apo në ndryshimin e çmimeve. Ky sistem mundëson prokurim publik më transparent, duke i eliminuar dyshimet për keqpërdorim të parasë publike.
+Në pasqyrë hyjnë edhe specifikimet harduerike dhe softuerike si dhe përshkrim i detajuar i sistemit(kërkesat funksionale,portabiliteti,siguria etj).</p>
+<h2 id="p%C3%ABrshkrimi-i-p%C3%ABrgjithsh%C3%ABm-i-sistemit-t%C3%AB-k%C3%ABrkuar">Përshkrimi i përgjithshëm i sistemit të kërkuar</h2>
+<p>SIMP duhet të jetë zëvendësimi i metodës së tanishme te aplikimit per tenderim,duke ua mundesuar  aplikuesve administrim të sigurt,efikas e transparent të të gjithë dokumenteve që lidhen me procesin e tenderimit,duke mënjanuar formën e dorëzimit të dokumentacionit në letër dhe duke siguruar një rrjetë të sigurt të të dhënave përgjatë gjithë procesit.Gjithashtu aplikuesit do të kenë qasje më të shpejtë dhe më të lehtë në historine e tyre</p>
+<h3 id="relacioni-me-projektet-ekzistuese">Relacioni me projektet ekzistuese</h3>
+<p>Prokurimi publik në përgjithësi është një fushë dhe aktivitet i ri që paraqitet në shtetet bashkëkohore, e sidomos në shtetet të cilat kanë pasur trende të zhvillimit të hovshëm nga ekonomia e planifikuar në ekonominë e tregut.
+Ky sistem është bërë duke marrë si referencë edhe praktikat më të mira në vendet e zhvilluara ku ky model ka përdorim më të gjerë.</p>
+<h3 id="q%C3%ABllimi-i-sistemit-t%C3%AB-k%C3%ABrkuar">Qëllimi i sistemit të kërkuar</h3>
+<p>Qëllimi I këtij sistemi duhet të jetë përmirsimi dhe modernizimi I mëtejshëm i sistemit të integruar të prokurimit që mundëson përdorimin më efikas të fondeve publike bazuar në transparencë,konkurrencë dhe trajtim të barabartë,duke mundësuar kursimin përmbajtësor të buxhetit si dhe kontribon në zhvillimin e gjithmbarshëm ekonomik të Republikës së Kosovës.Përvoja ndërkombëtare sugjeron që risitë teknologjike si e-prokurimet dhe ankandet elektronike mund të rrisin efikasitetin e prokurimit të eliminojnë manipulimet e tenderit,të forcojnë transparencën dhe të arrihet vlera për para.Digjitalizimi I proceseve të prokurimit eliminon ballafaqimin e drejtpërdrejt midis zyrtarëve të prokurimit dhe ofertuesve dhe në këtë mënyrë zvogëlohen ndjeshëm shanset e ryshfetit dhe korrupsionit.</p>
+<h3 id="kufizimet-dhe-inkorporimi-i-produktit">Kufizimet dhe inkorporimi I produktit</h3>
+<p>Ky sistem duhet të ketë mundësinë e integrimit me sistemet ekzistuese të nevojshme për procesin e aplikimit e që është sistemi e-Prokurimi ne kuader te MF-ve.</p>
+<h3 id="p%C3%ABrmbledhje-e-funksionalitetit-t%C3%AB-k%C3%ABrkuar">Përmbledhje e funksionalitetit të kërkuar</h3>
+<p>Modulet kryesore të sistemit janë:</p>
+<ul>
+<li>Regjistrimi i aplikuesve</li>
+<li>Pranimi I ofertave</li>
+<li>Bashkeveprimi me AKK</li>
+</ul>
+<p>Sistemi pranon të dhënat(dokumentacionin e skanuar) dhe formularet nga secili aplikues,e pastaj këto të dhëna dërgohen në softwerin e AKK</p>
+<h3 id="kufizimet-e-p%C3%ABrgjithshme">Kufizimet e përgjithshme</h3>
+<p>Pasiqë nuk ka pasur website për aplikim online, sistemi duhet të ju ofroj aplikuesve siguri dhe të fitojë besimin e tyre se aplikimi dhe ruajta e te dhenave në këtë mënyrë është plotësisht i sigurtë dhe në përputhje me ligjet në fuqi.</p>
+<h3 id="specifikimet-harduerike-dhe-softuerike">Specifikimet Harduerike dhe Softuerike</h3>
+<h4 id="specifikimet-harduerike">Specifikimet harduerike</h4>
+<p>Sistemi duhet të ketë dy servera për bazën e të dhënave (Database Server), (një për ruajtjen e shënimeve dhe një për kopjimin e te dhenave ose BACKUP),një server për ueb (Web Server) dhe një server post post elektronike (E-mail Server), me së paku këto specifika:</p>
+<p>Specifikimet e serverave për të dhëna (Database Server)</p>
+<ul>
+<li>Procesori:            Së paku 4.2 GHz, 6 bërthama</li>
+<li>Memoria: 		        Së paku 15 GB RAM</li>
+<li>Kartela e rrjetit: 	Së paku 5 Gbps</li>
+<li>Hard-disk: 		    Së paku 10TB</li>
+</ul>
+<p>Specifikimet e serverit për ueb (Web Server)</p>
+<ul>
+<li>Procesori: 		    Së paku 3.8 GHz, 4 bërthama</li>
+<li>Memoria: 		        Së paku 15 GB RAM</li>
+<li>Kartela e rrjetit:    Së paku 3 Gbps</li>
+<li>Hard-disk: 		    Së paku 5 TB</li>
+</ul>
+<p>Specifikimet e serverit për post elektronike (E-mail Server)</p>
+<ul>
+<li>Procesori: 		    Së paku 3.8 GHz, 4 bërthama</li>
+<li>Memoria: 		        Së paku 8 GB RAM</li>
+<li>Kartela e rrjetit: 	Së paku 1 Gbps</li>
+<li>Hard-disk: 		    Së paku 2 TB</li>
+</ul>
+<p>Specifikat e harduerit ku duhet të përdoret sistemi:</p>
+<p>Kompjuter me specifika</p>
+<ul>
+<li>Procesori: 		    i5 2.4 GHz</li>
+<li>Memoria: 		        4 GB RAM</li>
+<li>Kartela e rrjetit: 	100 Mbps</li>
+<li>Hard-disk: 		    1TB</li>
+</ul>
+<p>Printer me specifika</p>
+<ul>
+<li>ALL-IN-ONE</li>
+<li>10 fletë për sekondë</li>
+</ul>
+<p>Universal Plug System UPS</p>
+<ul>
+<li>400 – 1000 W/h</li>
+</ul>
+<h3 id="specifikimet-softuerike">Specifikimet softuerike</h3>
+<p>Serverat për të dhëna (Data base servers)</p>
+<ul>
+<li>Sistemi Operativ: 						            MS Windows 2012 Server</li>
+<li>Sistemi për menaxhimin e bazës së të dhënave :		MS SQL Server 2012</li>
+</ul>
+<p>Serveri për ueb (Web Server)</p>
+<ul>
+<li>Sistemi Operativ: 						            MS Windows 2012 Server</li>
+<li>Sistemi për menaxhimin ueb severit :			        IIS 8.5</li>
+</ul>
+<p>Serveri për post elektronike (E-Mail server)</p>
+<ul>
+<li>Sistemi Operativ: 						            MS Windows 7</li>
+<li>Sistemi për menaxhimin e mesazheve elektronike:  	    MS Outlook 2012</li>
+</ul>
+<p>Kompjuter</p>
+<ul>
+<li>Sistemi Operativ :						            Windows 7 ose 8</li>
+<li>PDF lexues :							                Adobe PDF ose FOXIT</li>
+</ul>
+<h3 id="specifikimet-fizike">Specifikimet fizike</h3>
+<p>Dhoma e serverëve duhet të ketë hapësirë e mjaftueshme për vendosjen e serverave për të dhëna, serverin e uebit dhe serverin e postës elektronike si dhe temperaturë normale për punë.</p>
+<h3 id="shfryt%C3%ABzuesit-e-sistemit-t%C3%AB-k%C3%ABrkuar">Shfrytëzuesit e sistemit të kërkuar</h3>
+<p>Shfrytëzuesit e sistemit të kërkuar duhet të ndahen sipas roleve dhe përgjegjësisve të tyre e ata janë:</p>
+<ul>
+<li>Aplikuesit</li>
+</ul>
+<p>Këta shfrytëzues duhet vetëm të aplikojnë dhe të kenë mundësi shikimin e historisë së aplikimit të tyre. Nevojitet vetëm njohuri elementare për përdorimin e kompjuterëve.</p>
+<ul>
+<li>Shfrytëzuesit e brendshëm (Inspektorët)</li>
+</ul>
+<p>Këta shfrytëzues duhet të kenë mundësinë të nxjerrin raportet dhe gjendjet nga sistemi, mirëpo jo të kenë qasje në ndryshim të tyre. Mund të  jetë i nevojshëm një trajnim i shkurtër(1 ditor) për të përvetësuar funksionet e sistemit. Nevojitet vetëm njohuri elementare për përdorimin e kompjuterëve.</p>
+<ul>
+<li>Administratorët e sistemit</li>
+</ul>
+<p>Ky (këta) shfrytëzues duhet të jetë në gjendje të menaxhoj dhe konfigurojë sistemin. Duke pasur parasysh se për këtë pozitë kërkohet person me kualifikime të teknologjisë informative, trajnimi i shkurtër (1 ditor) është i mjaftueshëm.</p>
+<h2 id="p%C3%ABrshkrimi-i-detajuar-i-sistemit">Përshkrimi i detajuar i sistemit</h2>
+<h3 id="fusha-e-dor%C3%ABzimit">Fusha e dorëzimit</h3>
+<p>Produkti përfundimtar i punës do te jetë një aplikacion i cili mundëson aplikimin online. Funksioni kryesor i sistemit është menaxhimi i formës së aplikimit online për tendere. Në pikat e mëposhtme kemi paraqitur disa pamje se si do të duket qasja në të në mënyrë që të ipet ideja se si do të duket aplikacioni.</p>
+<h3 id="skenar%C3%ABt-e-interaksioneve-me-rrethin%C3%ABn">Skenarët e interaksioneve me rrethinën</h3>
+<p>Secili shfrytëzues që dëshiron të aplikojë së pari duhet të regjistrohet në bazën e të dhënave të sistemit. Me anë të formës të regjistrimit,shfrytëzuesi e përcakton se cilës kategori i takon.</p>
+<img src="img/1.png">
+<p>Pas zgjedhjes së kategorisë,shfrytëzuesi duhet ta plotësojë fushën rreth të dhënave te tij.</p>
+<img src="img/2.png">
+<p>Pasi regjistrimi të bëhet me sukses shfrytëzuesi mund të kyçet dhe mund të ngarkojë filen(dosjen) me të dhënat rreth ofertës së tij. Gjithashtu shfrytëzuesi mund të shikojë historinë e tij.</p>
+<img src="img/3.png">
+<h3 id="pritjet-e-p%C3%ABrdoruesit">Pritjet e përdoruesit</h3>
+<ul>
+<li>Dobishmëria-web aplikacioni duhet të jete jokompleks,lehtë I manipulueshëm ashtuqë t’i ofrojë shfrytëzuesit një qasje më të lehtë.</li>
+<li>Dokumentacioni-web aplikacioni duhet të shfaqë informacionet e nevojshme për dokumentet që duhen për aplikim.</li>
+<li>Shumëgjuhësia-Bazuar në Kushtetutën e Republikës se Kosovës(Neni 5)-aplikacioni duhet të ofrohet në gjuhën Shqipe dhe Serbe,përveq detyrimeve nga kushtetuta,aplikacioni duhet të ofrohet edhe në gjuhën Angleze.</li>
+<li>Legjislacioni-Sistemi duhet të veprojë në përputhje me ligjet e miratuara të Republikës së Kosovës. Ky sistem mbështetet në legjislacionin për Prokurim dhe në ligjin për mbrojtjen e të dhënave.</li>
+</ul>
+<h3 id="funksionet-e-k%C3%ABrkuara-nga-sistemi">Funksionet e kërkuara nga sistemi</h3>
+<h4 id="k%C3%ABrkesat-funksionale">Kërkesat funksionale</h4>
+<p>Funksioni kryesor i sistemit është menaxhimi i formës së aplikimit online për tendere.
+Aplikimi duhet të jetë operacioni kryesor i sistemit SIMP ku përfshihet i gjithë procesi i plotësimit të formularëve në formën elektronike si dhe ruajtja e të dhënave në bazën e të dhënave.</p>
+<ol>
+<li>Vendosja e të dhënave në sistem</li>
+</ol>
+<p>Formulari duhet të përmbaj të dhënat për aplikuesin (Emri, adresa e ofertuesit, oferta e të cilit hapet, dokumentacioni ligjor dhe çdo dokument i kërkuar nga autoriteti kontraktues).Softweri nuk duhet të lejoj regjistrimin e aplikuesit në sistem pa plotësuar të gjitha fushat e nevojshme.</p>
+<ol start="2">
+<li>Deklarimi i Ofertës</li>
+</ol>
+<p>Aplikuesi duhet të ketë mundësinë që përmes formularëve përkatës të paraqes ofertën e tij.</p>
+<ol start="3">
+<li>Ri-aplikimi</li>
+</ol>
+<p>Nëse aplikuesi paraqet gabim në ofertë, atëherë sistemi duhet t’i lejoj vetëm një herë të ri-paraqesë ofertën dhe atë jo si ofertë e re por sikur korrigjim e asaj të vjetrës.</p>
+<ol start="4">
+<li>Azhurimi (update) i të dhënave</li>
+</ol>
+<p>Shfrytëzuesit (aplikuesit) e rinjë duhet të regjistrohen së bashku me të dhënat përkatëse për biznesin dhe të dhëna tjera përcjellëse, të nevojshme për procesin e aplikimit.</p>
+<ol start="5">
+<li>Alarmimi në rast gabimi</li>
+</ol>
+<p>Sistemi duhet të tregojë gabimet gjatë plotësimit të formularëve (duke mos e lejuar vazhdimin e procedures). Gjithashtu duhet të alarmoj gabimet e mundshme gjatë azhurimit të të dhënave.</p>
+<ol start="6">
+<li>Alarmimi në afat aplikimi</li>
+</ol>
+<p>Sistemi duhet të tregoj edhe për afatet e aplikimit të cilat aplikuesi i ka për obligim t’i respektoj me Legjislacionin e Prokurimit te Kosoves.</p>
+<h4 id="k%C3%ABrkesat-jofunksionale">Kërkesat jofunksionale</h4>
+<p>Që të sigurohet operimi normal i sistemit, kërkesat jo-funksionale që duhet të përmbushë SIMP janë:</p>
+<ol>
+<li>
+<p>Sistemi duhet të jetë i aftë të pranoj të dhënat nga paisje të ndyshme.</p>
+</li>
+<li>
+<p>Sistemi duhet të jetë në gjendje online 24 orë në ditë, 7 ditë në javë e 365 ditë në vit.</p>
+</li>
+<li>
+<p>Identifikimi i gabimeve.</p>
+</li>
+</ol>
+<p>Sistemi duhet të jetë në gjendje të identifikoj gabimet e mundshme gjatë deklarimit të të dhënava si ID jo-boshe, ID duplikate, ID gabim, emrat gabim, kontributet etj.</p>
+<ol start="4">
+<li>Sigurimi i konfidencialitetit</li>
+</ol>
+<p>Të gjitha komunikimet që duhet të kryhen në SIMP duhet të jenë të enkriptuara në bazë të standarteve ndërkombëtare.</p>
+<ol start="5">
+<li>Gjenerimi automatik i numrit identifikues</li>
+</ol>
+<p>Sistemi duhet që për çdo aplikim që bëhet për herë të parë të gjeneroj një numër unik dhe atë ta ruaj në bazën e të dhënave.</p>
+<ol start="6">
+<li>Ekzekutimi i më shumë se një kërkese (multitasking)</li>
+</ol>
+<p>Sistemi duhet të jetë në gjendje të përballoj përpunimin e njëkohshëm te kërkesave nga të gjitha njësitë që e shfrytëzojnë ketë sistem, sepse të dhënat duhet të lidhen me bazën qëndrore të të dhënave, pra me bazën e njejtë të të dhënave.</p>
+<ol start="7">
+<li>Ri-kyçja</li>
+</ol>
+<p>Nëse shfryetëzuesi nuk punon në sistem më shumë se 15 minuta ose e harron hapur atëherë sistemi duhet që në mënyrë automatike të shkyçet dhe t’i kërkohet ri-kyçja nëse dëshiron të kyçet në sistem.</p>
+<ol start="8">
+<li>Disponueshmëria e sistemit</li>
+</ol>
+<p>Sistemi duhet të jetë i disponueshëm edhe gjatë problemeve siç është ndërprerja e furnizimit me energji elektrike.</p>
+<h3 id="funksionet-tjera-t%C3%AB-k%C3%ABrkuara-nga-produkti">Funksionet tjera të kërkuara nga produkti</h3>
+<h4 id="performanca-e-sistemit">Performanca e sistemit</h4>
+<ul>
+<li>Sistemi duhet të përdor dy server ashtu që në rast të dështimit të njërit server,serveri tjetër të jetë në gjendje të procesojë kërkesat</li>
+<li>Sistemi duhet të jetë në gjendje te ristartohet për vetëm 15 sekonda</li>
+<li>Sistemi duhet të ketë dy Database server,një për ruajtjen e shënimeve dhe një për kopjimin e të dhënave ose BACKUP</li>
+</ul>
+<h4 id="siguria">Siguria</h4>
+<ul>
+<li>Përdorimi I HTTPS</li>
+<li>Sistemi duhet të ruhet ndaj teknikave të code injection sikurse që është sql injection,xss dhe abuzimeve të privilegjeve të databazës</li>
+<li>Sistemi duhet të përdor SSL gjatë transmetimit të të dhënave</li>
+</ul>
+<h4 id="portabiliteti">Portabiliteti</h4>
+<p>Sistemi elektronik SIMP duhet të jetë portabil ashtu që mund të përdoret në laptop,kompjuter apo nga paisje të tjera të mençura si telefoni dhe tableti.</p>
+<h4 id="besueshm%C3%ABria">Besueshmëria</h4>
+<p>Sistemi duhet të përdor dy server ashtu që në rast të dështimit të njërit server,serveri tjetër të jetë në gjendje të procesojë kërkesat.</p>
+<h4 id="mir%C3%ABmbajtja">Mirëmbajtja</h4>
+<p>Administratori I sistemit duhet të jete në gjendje të menaxhoj dhe konfigurojë sistemin.</p>
+<h4 id="rip%C3%ABrdorimi">Ripërdorimi</h4>
+<p>Ky sistem duhet të jetë në gjendje të jetë I ripërdorueshëm edhe nga shtetet e tjera të cilët ende nuk kanë një sistem të tillë.</p>
+<h4 id="p%C3%ABrdorueshm%C3%ABria">Përdorueshmëria</h4>
+<p>Leximi dhe shqyrtimi i aplikimeve bëhet vetëm nga personat të cilët janë të autorizuar për një punë të tillë. Për çdo rast të keqpërdorimit të këtyre të dhënave mundësohet evidentimi i personit përgjegjës në detyrë nëpërmjet mbajtjes së evidencës për punën e stafit.</p>
+<h3 id="modeli-i-domenit">Modeli i domenit</h3>
+<img src="img/ModeliDomenit.png">
+<h3 id="skenar%C3%ABt-e-interaksionit-use-case">Skenarët e interaksionit (use case)</h3>
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-1">Përshkrimi për use case 1</h4>
+<img src="img/useCase1.png">
+<p>Diagrami për use case 1</p>
+<img src="img/Diagramiusecase1.png">
+<p>Kontratat operacionale për use case 1</p>
+<p><b>Operacioni</b>: Krijimi i user-it (shfrytëzuesit) për regjistrim. </br>
+<b>Referencat</b>: Use Case nr.1, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të qaset në webfaqe. </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) gjatë regjistrimit jep të dhënat valide dhe regjistrohet me sukses.</p>
+<p>Diagrami sekuencial për use case 1</p>
+<img src="img/DiagramiSekuencial1.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-2">Përshkrimi për use case 2</h4>
+<img src="img/useCase2.png">
+<p>Diagrami për use case 2</p>
+<img src="img/Diagramiusecase2.png">
+<p>Kontratat operacionale për use case 2</p>
+<p><b>Operacioni</b>: Login-i për user-in (shfrytëzuesin) </br>
+<b>Referencat</b>: Use Case nr.2, “Prokurimi&quot; </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të jetë i regjistruar </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) kyqet me username dhe fjalëkalimin e tij valid.</p>
+<p>Diagrami sekuencial për use case 2</p>
+<img src="img/DiagramiSekuencial2.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-3">Përshkrimi për use case 3</h4>
+<img src="img/useCase3.png">
+<p>Diagrami për use case 3</p>
+<img src="img/Diagramiusecase3.png">
+<p>Kontratat operacionale për use case 3</p>
+<p><b>Operacioni</b>: Logout i user-it (shfrytëzuesit) </br>
+<b>Referencat</b>: Use Cases nr.3, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të jetë i kyqur në system </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) zgjedhë opsionin logout në sistem. Pasi që shfrytëzuesi të shkqyet nga sistemi, prapë shfaqet user-interface për login në sistem</p>
+<p>Diagrami sekuencial për use case 3</p>
+<img src="img/DiagramiSekuencial3.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-4">Përshkrimi për use case 4</h4>
+<img src="img/useCase4.png">
+<p>Diagrami për use case 4</p>
+<img src="img/Diagramiusecase4.png">
+<p>Kontratat operacionale për use case 4</p>
+<p><b>Operacioni</b>: Mbikqyrja e webfaqes </br>
+<b>Referencat</b>: Use Case nr.4, “Prokurorimi” </br>
+<b>Parakushtet</b>: Webfaqja duhet të mbikqyret vetëm nga personat e autorizuar </br>
+<b>Paskushtet</b>: Personat e autorizuar (administratori) i kanë privilegjet e nevojshme të cilat nuk mund ti ketë një përdorues i thjeshtë për mbikqyrjen e webfaqes.</p>
+<p>Diagrami sekuencial për use case 4</p>
+<img src="img/DiagramiSekuencial4.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-5">Përshkrimi për use case 5</h4>
+<img src="img/useCase5.png">
+<p>Diagrami për use case 5</p>
+<img src="img/Diagramiusecase5.png">
+<p>Kontratat operacionale për use case 5</p>
+<p><b>Operacioni</b>: Zgjedhja e gjuhës operuese për të punuar </br>
+<b>Referencat</b>: Use Case nr.5, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të qaset në webfaqe </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) të operoj në gjuhën e zgjedhur.</p>
+<p>Diagrami sekuencial për use case 5</p>
+<img src="img/DiagramiSekuencial5.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-6">Përshkrimi për use case 6</h4>
+<img src="img/useCase6.png">
+<p>Diagrami për use case 6</p>
+<img src="img/Diagramiusecase6.png">
+<p>Kontratat operacionale për use case 6</p>
+<p><b>Operacioni</b>: Ndryshimi I password-it të user-it (shfrytëzuesit). </br>
+<b>Referencat</b>: Use Case nr.6, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të ketë llogari aktive. </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) të jep të dhëna valide ashtu që e ndërron password-in me sukses.</p>
+<p>Diagrami sekuencial për use case 6</p>
+<img src="img/DiagramiSekuencial6.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-7">Përshkrimi për use case 7</h4>
+<img src="img/useCase7.png">
+<p>Diagrami për use case 7</p>
+<img src="img/Diagramiusecase7.png">
+<p>Kontratat operacionale për use case 7</p>
+<p><b>Operacioni</b>: Shtimi ose ndryshimi i të dhënave personale. </br>
+<b>Referencat</b>: Use Case nr.7, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të ketë llogari aktive. </br>
+<b>Paskushtet</b>: User-i (shfrytëzuesi) gjatë ndryshimit jep të dhënat valide dhe ndërron të dhënat e me sukses.</p>
+<p>Diagrami sekuencial për use case 7</p>
+<img src="img/DiagramiSekuencial7.png">
+<h4 id="p%C3%ABrshkrimi-p%C3%ABr-use-case-8">Përshkrimi për use case 8</h4>
+<img src="img/useCase8.png">
+<p>Diagrami për use case 8</p>
+<img src="img/Diagramiusecase8.png">
+<p>Kontratat operacionale për use case 8</p>
+<p><b>Operacioni</b>: Fshirja e user-it (shfrytëzuesit). </br>
+<b>Referencat</b>: Use Case nr.8, “Prokurorimi” </br>
+<b>Parakushtet</b>: User-i (shfrytëzuesi) duhet të ketë llogari jo aktive. </br>
+<b>Paskushtet</b>: Llogaria të mos jetë e aktive dhe e qasshme.</p>
+<p>Diagrami sekuencial për use case 8</p>
+<img src="img/DiagramiSekuencial8.png">
+<h3 id="k%C3%ABrkesat-e-klientit-p%C3%ABr-menaxhimin-e-projektit">Kërkesat e klientit për menaxhimin e projektit</h3>
+<p>Përshkrimi i kërkesave të klientit për menaxhimin e projektit.</p>
+<h3 id="k%C3%ABrkesat-e-implementimit">Kërkesat e implementimit</h3>
+<p>Sistemi duhet të implementohet në një afat kohor prej 3 muajsh.Komponentet të cilat mund të përdoren për funksionim të sistemit janë:
+Laptop dhe kompjuterë
+Universal Plug System UPS
+Dy servera për të dhëna(një Database Server dhe një Web Server)
+Një server post elektronik(E-mail Server)
+Rrjet kompjuterik
+Sistemi operativ (MS Windows 2007 ose 2008,MS Windows 2012 Server)
+Sistemi për menaxhimin e bazës së të dhënave(MS Sql Server 2012)
+Sistemi për menaxhimin e mesazheve elektronike(MS Outlook 2012)</p>
+<h3 id="komponentet-e-gatshme-dhe-ato-t%C3%AB-blera">Komponentet e gatshme dhe ato të blera</h3>
+<p>Për konfigurimin e rrjetës preferohet që paisjet e nevojshme për konfugurim të blihen të reja.</p>
+<h3 id="n%C3%ABnkontraktimi">Nënkontraktimi</h3>
+<p>Për  arsye se ky softuer do të punojë me të dhëna sensitive dhe kërkohet siguri në nivel të lartë nuk lejohet kontraktimi i ndonjë kompanie për zhvillimin e ndonjë komponenteje të sistemit</p>
+<h3 id="kushtet-e-pranimit">Kushtet e pranimit</h3>
+<p>Softueri duhet të testohet nga një kompani e posaqme që merret me testimin e softuerëve, dhe është i pranueshëm vetëm në rastin e plotësimit të secilës kerkesë të parashtruar nga klienti.</p>
+<h3 id="kushtet-e-dor%C3%ABzimit">Kushtet e dorëzimit</h3>
+<p>Setup-i i softuerit do të ruhet në Database Server dhe si i tillë nuk ka nevoje të shpërndahet në mënyre fizike.</p>
+<h3 id="garancia">Garancia</h3>
+<p>Për paisjet harduerike sistemi duhet të ketë garanicë prej më së shumti 24 muaj ndërsa softueri duhet të jetë vazhdimisht në mbikëqyrje.</p>
+<h2 id="obligimet-e-klientit">Obligimet e klientit</h2>
+<p>Obligimi i vetëm i klientit është që të sigurojë harduerin në mënyrë që të ketë qasje në platformën e krijuar si dhe të ketë qasje në rrjet.</p>
+<h3 id="planifikimi-i-resurseve">Planifikimi i resurseve</h3>
+<img src="img/PlanifikimiResurseve.png">
+<h3 id="planifikimi-i-buxhetit">Planifikimi i buxhetit</h3>
+<img src="img/PlanifikimiBuxhetit.png">
+
+</body>
+</html>
