@@ -347,7 +347,7 @@ Leximi dhe shqyrtimi i aplikimeve bëhet vetëm nga personat të cilët janë t�
 
 Diagrami për use case 1
 
-<img src="img/Diagramiusecase1.png">
+<img src="img/DiagramiUsecase1.png">
 
 Kontratat operacionale për use case 1
 
@@ -366,7 +366,7 @@ Diagrami sekuencial për use case 1
 
 Diagrami për use case 2
 
-<img src="img/Diagramiusecase2.png">
+<img src="img/DiagramiUsecase2.png">
 
 Kontratat operacionale për use case 2
 
@@ -385,7 +385,7 @@ Diagrami sekuencial për use case 2
 
 Diagrami për use case 3
 
-<img src="img/Diagramiusecase3.png">
+<img src="img/DiagramiUsecase3.png">
 
 Kontratat operacionale për use case 3
 
@@ -404,7 +404,7 @@ Diagrami sekuencial për use case 3
 
 Diagrami për use case 4
 
-<img src="img/Diagramiusecase4.png">
+<img src="img/DiagramiUsecase4.png">
 
 Kontratat operacionale për use case 4
 
@@ -423,7 +423,7 @@ Diagrami sekuencial për use case 4
 
 Diagrami për use case 5
 
-<img src="img/Diagramiusecase5.png">
+<img src="img/DiagramiUsecase5.png">
 
 Kontratat operacionale për use case 5
 
@@ -442,7 +442,7 @@ Diagrami sekuencial për use case 5
 
 Diagrami për use case 6
 
-<img src="img/Diagramiusecase6.png">
+<img src="img/DiagramiUsecase6.png">
 
 Kontratat operacionale për use case 6
 
@@ -461,7 +461,7 @@ Diagrami sekuencial për use case 6
 
 Diagrami për use case 7
 
-<img src="img/Diagramiusecase7.png">
+<img src="img/DiagramiUsecase7.png">
 
 Kontratat operacionale për use case 7
 
@@ -480,7 +480,7 @@ Diagrami sekuencial për use case 7
 
 Diagrami për use case 8
 
-<img src="img/Diagramiusecase8.png">
+<img src="img/DiagramiUsecase8.png">
 
 Kontratat operacionale për use case 8
 
